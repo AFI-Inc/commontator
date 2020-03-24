@@ -1,5 +1,5 @@
 class DummyModelsController < ActionController::Base
-  before_filter :get_dummy
+  before_action :get_dummy
 
   # Workaround for https://github.com/rails/rails/issues/11662
   def self.params
@@ -32,4 +32,3 @@ class DummyModelsController < ActionController::Base
     @dummy_model = DummyModel.find(params[:id])
   end
 end
-
